@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1ofog23" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1gdunt8" name="Unexpected Sum Received">
+    <decisionTable id="DecisionTable_1qip0sl">
+      <input id="Input_1" label="Unexpected Sum Received" biodi:width="530" camunda:inputVariable="unexpectedSumReceived">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>unexpectedSumReceived</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_17gy2dx">
+          <text>"Deposit it in a bank account","Invest it in safe high-quality bonds or bond mutual funds","Invest it in stocks or stock mutual funds"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="UnSumReceived Score" name="unexpectedSumReceivedScore" typeRef="integer" />
+      <rule id="DecisionRule_0p354rz">
+        <inputEntry id="UnaryTests_0xokc95">
+          <text>"Deposit it in a bank account"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_115o2jp">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_197w9z9">
+        <inputEntry id="UnaryTests_0ksw1fr">
+          <text>"Invest it in safe high-quality bonds or bond mutual funds"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bmcinj">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ebpsc9">
+        <inputEntry id="UnaryTests_1lbx3to">
+          <text>"Invest it in stocks or stock mutual funds"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03jkdnp">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1gdunt8">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

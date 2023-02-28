@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="childrenTable_definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_16nx3fd" name="#children and salary Table">
+    <decisionTable id="DecisionTable_0byjk5c">
+      <input id="Input_1" label="No of Children" camunda:inputVariable="children_count">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>children_count</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Children Score" name="children_count_score" typeRef="integer" />
+      <rule id="DecisionRule_1dr6zej">
+        <inputEntry id="UnaryTests_0764gus">
+          <text>"One child"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17w0797">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0n9mbpf">
+        <inputEntry id="UnaryTests_1ugmdux">
+          <text>"Two children"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xfpw8g">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c294e9">
+        <inputEntry id="UnaryTests_0uzjetq">
+          <text>"&gt; 3 children"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gw3sls">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09mu6rs">
+        <inputEntry id="UnaryTests_1922fcz">
+          <text>"No Kids"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a7tqwr">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07t0mgl">
+        <inputEntry id="UnaryTests_1ojp3uo">
+          <text>"Un Married"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01f2fp7">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_16nx3fd">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

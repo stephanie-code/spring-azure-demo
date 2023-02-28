@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1jvlrxr" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_19i11lz" name="Annual Take Home Salary">
+    <decisionTable id="DecisionTable_01kzg65">
+      <input id="Input_1" label="Take Home Salary p.a (lac)" biodi:width="307" camunda:inputVariable="salaryPerAnnum">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>salaryPerAnnum</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="ATHS Score" name="annual_take_home_salary_score" typeRef="integer" />
+      <rule id="DecisionRule_1ls1bqp">
+        <inputEntry id="UnaryTests_0zo1cq3">
+          <text>"Under INR 2,00,000"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wcyew6">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09kok2m">
+        <inputEntry id="UnaryTests_0v9ulv9">
+          <text>"INR 2,00,000 to INR 5,00,000"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06le46n">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m5059z">
+        <inputEntry id="UnaryTests_1kwbuyd">
+          <text>"INR 5,00,00 to INR 10,00,000"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jh6dpg">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16yi22h">
+        <inputEntry id="UnaryTests_0tjlnlm">
+          <text>"INR 10,00,000 to INR 20,00,000"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wc1qiu">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0aj9huu">
+        <inputEntry id="UnaryTests_0mbrvge">
+          <text>"Over INR 20,00,000"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09recaw">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_19i11lz">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1i5usex" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1rofdfh" name="Monthly Income Investable">
+    <decisionTable id="DecisionTable_1q1io9t">
+      <input id="Input_1" label="Monthly Investable (%)" camunda:inputVariable="incomeInvestable">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>incomeInvestable</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="MII Score" name="monthly_income_investable_score" typeRef="integer" />
+      <rule id="DecisionRule_1a29wao">
+        <inputEntry id="UnaryTests_1wgljbq">
+          <text>"0 to 10%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10jafit">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03l0cz2">
+        <inputEntry id="UnaryTests_0wmd0bn">
+          <text>"11% to 20%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07xtktk">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_041j9m1">
+        <inputEntry id="UnaryTests_18pwcoy">
+          <text>"21% to 30%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13501np">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fxhsra">
+        <inputEntry id="UnaryTests_1spsulr">
+          <text>"More than 30%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17dd3ac">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04pieuh">
+        <inputEntry id="UnaryTests_1xt9a1h">
+          <text>"I currently have no income"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04i28t1">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1rofdfh">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

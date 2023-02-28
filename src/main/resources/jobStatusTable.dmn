@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0o3m2c2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1suk01t" name="Job Status">
+    <decisionTable id="DecisionTable_0fxdc14">
+      <input id="Input_1" label="Job Status" camunda:inputVariable="job_status">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>job_status</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_182823g">
+          <text>"Government","Private","Others"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="JS Score" name="job_status_score" typeRef="integer" />
+      <rule id="DecisionRule_10tajt5">
+        <inputEntry id="UnaryTests_1ws9l2r">
+          <text>"Government"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03hxda8">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0aoxth4">
+        <inputEntry id="UnaryTests_0v6phf9">
+          <text>"Private"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lczxjk">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ohypoj">
+        <inputEntry id="UnaryTests_1c65mjf">
+          <text>"Others"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fo9mew">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1suk01t">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

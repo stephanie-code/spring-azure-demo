@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1d08udo" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_0ih8g12" name="Income Liabilites">
+    <decisionTable id="DecisionTable_0zsou95">
+      <input id="Input_1" label="Income Liabilities" camunda:inputVariable="incomeLiability">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>incomeLiability</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="IL Score" name="incomeLiabilityScore" typeRef="integer" />
+      <rule id="DecisionRule_15xq9b0">
+        <inputEntry id="UnaryTests_1ccao6r">
+          <text>"&gt; 50%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13xjg8w">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jnj1p8">
+        <inputEntry id="UnaryTests_1hzu6nm">
+          <text>"50% to 30%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17g2t7y">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q1162l">
+        <inputEntry id="UnaryTests_1gf10rr">
+          <text>"30% to 20%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0efvzwk">
+          <text>5</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dax801">
+        <inputEntry id="UnaryTests_1vp9dqs">
+          <text>"Less than 20%"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hafu56">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0ih8g12">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

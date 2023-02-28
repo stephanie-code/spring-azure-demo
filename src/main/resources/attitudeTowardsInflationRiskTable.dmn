@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_10c6113" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1dsb143" name="Attitude Towards Inflation and Risk">
+    <decisionTable id="DecisionTable_034phg2" biodi:annotationsWidth="400">
+      <input id="Input_1" label="Attitude Towards Inflation and Risk" biodi:width="846" camunda:inputVariable="inflation_risk_attitude">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>inflation_risk_attitude</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0zop2i9">
+          <text></text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Attitude Towards Inflation and Risk Score" name="inflation_risk_attitude_score" typeRef="integer" />
+      <rule id="DecisionRule_1dba7k5">
+        <inputEntry id="UnaryTests_091gnwm">
+          <text>"My main goal is to avoid loss, even though I may only keep pace with inflation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vwne4h">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12c12tq">
+        <inputEntry id="UnaryTests_1oly601">
+          <text>"My main goal is to earn slightly more than inflation, while taking on a low level of risk"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1waf23n">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19w98oy">
+        <inputEntry id="UnaryTests_14ynde8">
+          <text>"My main goal is to increase my portfolio’s value. Therefore, I am willing to accept short-term losses, but I am not comfortable with extreme performance shifts that may be experienced in the most aggressive investment options"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eo7baf">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16c0jzx">
+        <inputEntry id="UnaryTests_0v3662p">
+          <text>"My main goal is to maximize my portfolio value, and I am willing to take on more extreme levels of risk and performance shifts in my portfolio to do so."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qemqyr">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1dsb143">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1sk5b7e" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_0r7z55b" name="Investment Experience">
+    <decisionTable id="DecisionTable_050ax48">
+      <input id="Input_1" label="Investment Experience" camunda:inputVariable="investment_exp">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>investment_exp</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0b8kmgi">
+          <text>"Not at all comfortable","Somewhat comfortable","Comfortable","Very Comfortable"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Investment Exp Score" name="investment_exp_score" typeRef="integer" />
+      <rule id="DecisionRule_0qxga8u">
+        <inputEntry id="UnaryTests_1384hvo">
+          <text>"Not at all comfortable"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lkfmsa">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bsvg63">
+        <inputEntry id="UnaryTests_0cfg4wt">
+          <text>"Somewhat comfortable"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07jbbdi">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gs11hd">
+        <inputEntry id="UnaryTests_0mpn48u">
+          <text>"Comfortable"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1npxeuy">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1aob1f4">
+        <inputEntry id="UnaryTests_0hvnd0k">
+          <text>"Very Comfortable"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fj915e">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0r7z55b">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

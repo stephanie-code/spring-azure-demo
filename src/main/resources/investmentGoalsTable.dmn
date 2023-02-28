@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_01szlcu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1h54tjp" name="Investment goals">
+    <decisionTable id="DecisionTable_1ip9nug">
+      <input id="Input_1" label="Investment goals" biodi:width="1090" camunda:inputVariable="investment_goals">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>investment_goals</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Investment goals Score" name="investment_goals_score" typeRef="integer" />
+      <rule id="DecisionRule_09fc06b">
+        <inputEntry id="UnaryTests_03mf7lk">
+          <text>"Protect the value of my account. In order to minimize the chance for loss, I am willing to accept the lower long-term returns provided by conservative investments."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t2s3dm">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10yhn63">
+        <inputEntry id="UnaryTests_0lhos5e">
+          <text>"Keep risk to a minimum while trying to achieve slightly higher returns than the returns provided by investments that are more conservative."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ishewd">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eyj9l3">
+        <inputEntry id="UnaryTests_14yvuqq">
+          <text>"Focus more on the long-term investment returns. Long-term growth is equally as important as managing portfolio risk."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02jwuzq">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02768ez">
+        <inputEntry id="UnaryTests_06i1iyo">
+          <text>"Maximize long-term investment returns. I am willing to accept large and sometimes dramatic short-term fluctuations in the value of my investments."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00tsyl2">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1h54tjp">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1sstt9k" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_0ymao9a" name="Willingness to take High Risk">
+    <decisionTable id="DecisionTable_09pvlsg">
+      <input id="Input_1" label="Risk taking willingness" biodi:width="192" camunda:inputVariable="highRiskWillingness">
+        <inputExpression id="InputExpression_1" typeRef="strings">
+          <text>highRiskWillingness</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="High Risk taking willingness score" name="highRiskWillingnessScore" typeRef="integer" />
+      <rule id="DecisionRule_0rr3u0u">
+        <inputEntry id="UnaryTests_0lmqile">
+          <text>"Strongly Disagree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ulr0a0">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0thyuly">
+        <inputEntry id="UnaryTests_1e479x8">
+          <text>"Disagree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19wfptn">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15qmemo">
+        <inputEntry id="UnaryTests_097cj50">
+          <text>"Neutral"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wlze3p">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14dwoc2">
+        <inputEntry id="UnaryTests_1kbne4f">
+          <text>"Agree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wxdoqc">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yh5tea">
+        <inputEntry id="UnaryTests_0h0s24n">
+          <text>"Strongly Agree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t0hy2x">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0ymao9a">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

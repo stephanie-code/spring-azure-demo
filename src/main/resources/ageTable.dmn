@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="ageTable_definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_03d6alq" name="Age Table">
+    <decisionTable id="DecisionTable_00g49w7">
+      <input id="Input_1" label="Age" biodi:width="192" camunda:inputVariable="age">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Age Score" name="age_score" typeRef="integer" biodi:width="192" />
+      <rule id="DecisionRule_06w6yv1">
+        <inputEntry id="UnaryTests_1hj9kis">
+          <text>"18 to 30 years old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vdrg55">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dgyt8q">
+        <inputEntry id="UnaryTests_01b2qjp">
+          <text>"31 to 40 years old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dlo85d">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07w27yd">
+        <inputEntry id="UnaryTests_0w6kaap">
+          <text>"41 to 50 years old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qiowq1">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1thrpyu">
+        <inputEntry id="UnaryTests_1bnd30j">
+          <text>"51 to 60 years old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ic16zh">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00ntma9">
+        <inputEntry id="UnaryTests_1cwvlo0">
+          <text>"Above 60 years old"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u4vofu">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_03d6alq">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

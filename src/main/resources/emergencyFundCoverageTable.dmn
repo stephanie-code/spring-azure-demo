@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0c0erar" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1oz9k5k" name="Emergency Fund Coverage">
+    <decisionTable id="DecisionTable_006vizp">
+      <input id="Input_1" label="Emergency Fund Coverage" camunda:inputVariable="ef">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>ef</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="EF Score" name="emerg_fund_score" typeRef="integer" />
+      <rule id="DecisionRule_11h332s">
+        <inputEntry id="UnaryTests_0sn63e9">
+          <text>"I currently have no emergency funds"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pxjbbt">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19t4okt">
+        <inputEntry id="UnaryTests_18mzr75">
+          <text>"Less than 3 months"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lonma0">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1p7o4ud">
+        <inputEntry id="UnaryTests_1tyxoem">
+          <text>"4 to 6 months"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vkqzsf">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1acq1oi">
+        <inputEntry id="UnaryTests_158db62">
+          <text>"7 to 9 months"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y7gb9x">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_114brcz">
+        <inputEntry id="UnaryTests_0hyfg77">
+          <text>"More than 9 months"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00n0wjw">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1oz9k5k">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

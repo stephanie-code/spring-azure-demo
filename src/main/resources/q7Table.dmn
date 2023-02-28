@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1aeuxgs" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1jz4av6" name="Q7">
+    <decisionTable id="DecisionTable_1csmx8b">
+      <input id="Input_1" label="Q7" biodi:width="624" camunda:inputVariable="q7">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>q7</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Q7" name="q7_score" typeRef="integer" />
+      <rule id="DecisionRule_1c74k2f">
+        <inputEntry id="UnaryTests_1cyf9zw">
+          <text>"I would change to investments that are more aggressive."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pclk4o">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t4ya6c">
+        <inputEntry id="UnaryTests_0dntw6c">
+          <text>"I would not change my portfolio."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ncfyze">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ctg3g2">
+        <inputEntry id="UnaryTests_1yagilo">
+          <text>"I would wait at least 1 year before changing to options that are more conservative."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gdyxsd">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c3r6sz">
+        <inputEntry id="UnaryTests_0q0mlbo">
+          <text>"I would immediately change to options that are more conservative."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0awkldc">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1jz4av6">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

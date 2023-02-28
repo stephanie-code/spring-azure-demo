@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1kr0dse" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_11pas0o" name="Q9">
+    <decisionTable id="DecisionTable_1c3nwe0">
+      <input id="Input_1" label="Q9" camunda:inputVariable="q9">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>q9</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Q9 Score" name="q9_score" typeRef="integer" />
+      <rule id="DecisionRule_08qa57i">
+        <inputEntry id="UnaryTests_122065i">
+          <text>"Strongly disagree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1slw7u1">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0iaszzx">
+        <inputEntry id="UnaryTests_0uew5ex">
+          <text>"Disagree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sapcxo">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p8nldn">
+        <inputEntry id="UnaryTests_1hjchqa">
+          <text>"Agree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mrc71i">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kfclov">
+        <inputEntry id="UnaryTests_1nzac84">
+          <text>"Strongly Agree"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0atfmhb">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_11pas0o">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

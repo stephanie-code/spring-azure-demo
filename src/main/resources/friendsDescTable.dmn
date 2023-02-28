@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_11tvm5w" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1sp4kye" name="Friend&#39;s Description">
+    <decisionTable id="DecisionTable_0ns6vob">
+      <input id="Input_1" label="Friend&#39;s Description" camunda:inputVariable="friendsDesc">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>friendsDesc</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1bb9pfc">
+          <text>"A real gambler","Willing to take risks after completing adequate research","Cautious","A real risk avoider"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Friends Desc Score" name="friends_desc_score" typeRef="integer" />
+      <rule id="DecisionRule_058bm9e">
+        <inputEntry id="UnaryTests_160pfck">
+          <text>"A real gambler"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rj0auf">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u7x9y1">
+        <inputEntry id="UnaryTests_1w23lf7">
+          <text>"Willing to take risks after completing adequate research"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bk44cm">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xb699o">
+        <inputEntry id="UnaryTests_1lrg66d">
+          <text>"Cautious"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07fky0o">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18fzknr">
+        <inputEntry id="UnaryTests_14ily9q">
+          <text>"A real risk avoider"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tdimq6">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1sp4kye">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

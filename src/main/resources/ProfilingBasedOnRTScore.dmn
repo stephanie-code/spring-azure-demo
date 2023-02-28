@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1y85wp3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1fiwt3u" name="Profiling based on RT Score">
+    <decisionTable id="DecisionTable_0lx879x">
+      <input id="Input_1" label="RT Score" camunda:inputVariable="rtScore">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>rtScore</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Profiling" name="rt_profiling_output" typeRef="string">
+        <outputValues id="UnaryTests_1cs6iw0">
+          <text>"Safety","Growth","Balanced","Conservative_Income","Aggressive_Growth"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_103azfx">
+        <inputEntry id="UnaryTests_1hmenxt">
+          <text>&lt;15</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0op45mj">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uukhvf">
+        <inputEntry id="UnaryTests_1145lfb">
+          <text>[15..25]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t5iyl2">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r873a9">
+        <inputEntry id="UnaryTests_0tiaa3a">
+          <text>[26..40]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_011gadv">
+          <text>"Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rpqzzj">
+        <inputEntry id="UnaryTests_1mbrg75">
+          <text>&gt;40</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05kb6o7">
+          <text>"Aggressive_Growth"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1fiwt3u">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1xb1mgx" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_0abmjl3" name="Profiling Table">
+    <decisionTable id="DecisionTable_0aecuir">
+      <input id="InputClause_11ujho6" label="RA Score" camunda:inputVariable="ra_profiling_output">
+        <inputExpression id="LiteralExpression_00sph45" typeRef="string">
+          <text>ra_profiling_output</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0hnpsve">
+          <text>"Safety","Balanced","Growth","Conservative_Income","Aggressive_Growth"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0wnf3ia" label="RT Score" camunda:inputVariable="rt_profiling_output">
+        <inputExpression id="LiteralExpression_1imr3do" typeRef="string">
+          <text>rt_profiling_output</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_04x6k38">
+          <text>"Safety","Balanced","Growth","Conservative_Income","Aggressive_Growth"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Profiling" name="profiledOutput" typeRef="string">
+        <outputValues id="UnaryTests_1mxajyq">
+          <text>"Safety","Balanced","Growth","Aggressive_Growth","Conservative_Income"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_07kuish">
+        <inputEntry id="UnaryTests_0lxya6j">
+          <text>"Safety"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1khzxft">
+          <text>"Safety"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dtea75">
+          <text>"Safety"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xgep1b">
+        <inputEntry id="UnaryTests_14sr51c">
+          <text>"Safety"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_075gvgb">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bpy4hp">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_199p33x">
+        <inputEntry id="UnaryTests_0lvd4fh">
+          <text>"Safety"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oep63z">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1poq26b">
+          <text>"Aggressive_Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1f0rejc">
+        <inputEntry id="UnaryTests_1sdvzat">
+          <text>"Safety"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ajfku8">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05msgs9">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qk7g0y">
+        <inputEntry id="UnaryTests_0dhk1cd">
+          <text>"Safety"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u7ksrx">
+          <text>"Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mlbpdr">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14gjocl">
+        <inputEntry id="UnaryTests_1emcpie">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05g7f0e">
+          <text>"Safety"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mivxfq">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18gbjhb">
+        <inputEntry id="UnaryTests_0a28gg2">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_108npr2">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pn3f4m">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1or2ecv">
+        <inputEntry id="UnaryTests_110y7s8">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_109r685">
+          <text>"Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q1eje0">
+          <text>"Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0w83r7l">
+        <inputEntry id="UnaryTests_0vksdt9">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16coia5">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cj9ioz">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y14afg">
+        <inputEntry id="UnaryTests_0ruyj8e">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jww391">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15fsyft">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l3ieqe">
+        <inputEntry id="UnaryTests_1a9xfcu">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wzma3z">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gragds">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1e08tqh">
+        <inputEntry id="UnaryTests_1bcbak7">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ryzioz">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1j0hd1h">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y8hqja">
+        <inputEntry id="UnaryTests_0q4mnzo">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ewyj2e">
+          <text>"Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0toj5op">
+          <text>"Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vmm17z">
+        <inputEntry id="UnaryTests_1tqd9ae">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0omx92v">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08b99hp">
+          <text>"Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yamat9">
+        <inputEntry id="UnaryTests_0mvfpkb">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s5e02l">
+          <text>"Safety"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0etuk1g">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kq67er">
+        <inputEntry id="UnaryTests_12go481">
+          <text>"Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m9wwzt">
+          <text>"Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ex99lo">
+          <text>"Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11zctao">
+        <inputEntry id="UnaryTests_1badp11">
+          <text>"Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05zmq0x">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11mg83u">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1osl0vi">
+        <inputEntry id="UnaryTests_130j4ce">
+          <text>"Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fbi7kk">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wr6hcs">
+          <text>"Aggressive_Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ixcqfh">
+        <inputEntry id="UnaryTests_1f5tkp8">
+          <text>"Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_145k6q6">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_004v1lx">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0grj2ft">
+        <inputEntry id="UnaryTests_10k7dzg">
+          <text>"Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10kl7jo">
+          <text>"Safety"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0phnbc1">
+          <text>"Conservative_Income"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pfntpf">
+        <inputEntry id="UnaryTests_11zqtgz">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lx555j">
+          <text>"Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a87gln">
+          <text>"Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1w4ggz2">
+        <inputEntry id="UnaryTests_09ib5xt">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0up08ti">
+          <text>"Safety"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ci8ub2">
+          <text>"Safety"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p1ikb7">
+        <inputEntry id="UnaryTests_0xzf2mg">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13ypm3j">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1aoq7dr">
+          <text>"Aggressive_Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1d3jw97">
+        <inputEntry id="UnaryTests_0sckrq7">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nnhel7">
+          <text>"Balanced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12vky71">
+          <text>"Growth"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cu76qi">
+        <inputEntry id="UnaryTests_102d6i4">
+          <text>"Aggressive_Growth"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cdjy85">
+          <text>"Conservative_Income"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s4ak97">
+          <text>"Balanced"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0abmjl3">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

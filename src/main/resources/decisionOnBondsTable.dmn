@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_174ks2s" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1y059ry" name="Decision on Bonds">
+    <decisionTable id="DecisionTable_1yv0k3v">
+      <input id="Input_1" label="Decision on Bonds" camunda:inputVariable="decision_on_bonds">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>decision_on_bonds</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1iii7a0">
+          <text></text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Decision on Bonds Score" name="decision_on_bonds_score" typeRef="integer" />
+      <rule id="DecisionRule_09nqr0w">
+        <inputEntry id="UnaryTests_1atgote">
+          <text>"Hold the bonds"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r7v5l4">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gy1e8e">
+        <inputEntry id="UnaryTests_12jpvzf">
+          <text>"Sell the bonds, put half the proceeds into money market accounts, and the other half into hard assets"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0s3okqd">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1u4kma9">
+        <inputEntry id="UnaryTests_07prft9">
+          <text>"Sell the bonds and put the total proceeds into hard assets"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gblryv">
+          <text>6</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00gqjyd">
+        <inputEntry id="UnaryTests_06rm5lq">
+          <text>"Sell the bonds, put all the money into hard assets, and borrow additional money to buy more"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xxfs65">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1y059ry">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
