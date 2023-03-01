@@ -31,6 +31,8 @@ public class QuestionAnswerService {
         for (final Questionnaire question : questionnaires) {
             QuestionAnswer questionAnswer = new QuestionAnswer();
             questionAnswer.QuestionName = question.getQuestion();
+            questionAnswer.QuesKey = question.getQueskey();
+
             List<String> answerslist = new ArrayList<>();
             for (final Answer answer : answers) {
                 if (answer.getId() == question.getId()) {
