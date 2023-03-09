@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'InvestWebApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_91BA929AAB5242B08FE7EA59E08EBADB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_23CF8AD234B540F9AEF11525A8D37701 }}
           package: '*.jar'
