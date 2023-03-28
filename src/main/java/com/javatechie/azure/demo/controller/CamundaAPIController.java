@@ -1,6 +1,8 @@
 package com.javatechie.azure.demo.controller;
 
 import com.javatechie.azure.demo.model.StartProcess;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 @RequestMapping("/camundaController")
 public class CamundaAPIController {
+//    private static final Logger logger = LoggerFactory.getLogger(CamundaAPIController.class);
+
     @PostMapping("start")
     public Object startProcess(@RequestBody StartProcess startProcess){
         try{
@@ -26,6 +30,7 @@ public class CamundaAPIController {
 
             ResponseEntity<Object> result =  restTemplate.postForEntity(url, httpEntity,Object.class);
             Object res = result.getBody();
+//            logger.info("Start Process with response" + res);
             return res;
         } catch (Exception exception){
             throw exception;
